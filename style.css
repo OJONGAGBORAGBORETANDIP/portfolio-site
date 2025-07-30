@@ -21,8 +21,8 @@ section {
 ====================== */
 .hero {
   height: 100vh;
-  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-  color: white;
+  background: linear-gradient(135deg, #eaebed, #0303ec,rgb(247, 153, 153));
+  color: rgba(255, 255, 255, 0);
 }
 
 /* =====================

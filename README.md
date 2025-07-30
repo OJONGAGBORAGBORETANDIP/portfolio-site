@@ -1,12 +1,14 @@
 # 🎨 Data-Driven Creative Portfolio
 
-A fully responsive, vibrant one-page portfolio website for a **Data Analyst** with multidisciplinary expertise in:
+A fully responsive, vibrant one-page portfolio website for a **fULL STACK** with multidisciplinary expertise in:
 
-- 📊 Data Analytics & Visualization
 - 🌐 Web Development
-- 📣 Digital Marketing & Campaign Strategy
-- 📷 Photography
-- 🎨 Branding & Graphic Design
+USING 
+... HTML
+...CSS 
+...JAVASCRIPT
+
+
 
 ---
 
