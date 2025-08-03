@@ -1,0 +1,480 @@
+/* Universal Box-Sizing for easier layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Body Styles - Font, Line Height, Background */
+body {
+    font-family: Arial, sans-serif; /* A common, readable font */
+    line-height: 1.6;
+    color: #333; /* Dark grey for text */
+    background-color: #f4f4f4; /* Light grey background for the whole page */
+}
+
+/* Container for main content to limit width and center it */
+main {
+    max-width: 1200px; /* Max width of your content */
+    margin: 20px auto; /* Center the content with some top/bottom margin */
+    padding: 20px;
+    background-color: #fff; /* White background for the main content area */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50; /* A dark blue/grey for headings */
+    margin-bottom: 15px;
+    text-align: center; /* Center align all headings by default */
+}
+
+h1 {
+    font-size: 2.5em; /* Larger for main title */
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 30px; /* More space above section headings */
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Links - Basic Styling */
+a {
+    color: #007bff; /* A standard blue for links */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Images - Ensure they don't overflow their containers */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below images */
+    margin: 0 auto; /* Center images */
+}
+
+/* Utility Class for Sections - Consistent padding */
+.page-section {
+    padding: 30px 0; /* Add vertical padding to sections */
+    border-bottom: 1px solid #eee; /* Light separator between sections */
+    margin-bottom: 20px; /* Space after each section */
+}
+
+.page-section:last-child {
+    border-bottom: none; /* No border for the last section */
+    margin-bottom: 0;
+}/* Header Styling */
+header {
+    background-color: #34495e; /* Dark blue/grey background */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    display: flex; /* Use Flexbox for header content */
+    align-items: center; /* Vertically align items in the center */
+    justify-content: center; /* Center content horizontally */
+    flex-direction: column; /* Stack logo and h1 vertically on smaller screens */
+    text-align: center; /* Center text if flex-direction is column */
+}
+
+header .logo img {
+    max-width: 150px; /* Max width for your logo */
+    height: auto;
+    margin-bottom: 10px; /* Space between logo and title */
+}
+
+header h1 {
+    color: #fff; /* White color for the main heading in the header */
+    margin-bottom: 0; /* Remove default h1 margin */
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #2c3e50; /* Slightly darker blue/grey for nav */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow below nav */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points from list */
+    display: flex; /* Use Flexbox for navigation items */
+    justify-content: center; /* Center the navigation links horizontally */
+    gap: 20px; /* Space between navigation items */
+    padding: 0 20px; /* Add some horizontal padding */
+    flex-wrap: wrap; /* Allow nav items to wrap on smaller screens */
+}
+
+nav ul li a {
+    color: #fff; /* White text for nav links */
+    text-decoration: none;
+    padding: 10px 15px; /* Padding inside links to make them clickable */
+    border-radius: 5px; /* Slightly rounded corners for links */
+}
+
+nav ul li a:hover,
+nav ul li a.active { /* 'active' class can be added by JavaScript for current page */
+    background-color: #1abc9c; /* Greenish-blue on hover/active */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #34495e; /* Same as header for consistency */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; /* Space above the footer */
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0; /* Adjust margin for footer paragraphs */
+    /* Gallery Section Styling */
+#gallery {
+    text-align: center; /* Center the "PHIBMAT GALLERY" title */
+    padding: 40px 0; /* Add more vertical padding for the gallery section */
+}
+
+.gallery-container {
+    display: flex; /* Use Flexbox to arrange gallery items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Space between gallery items */
+    padding: 20px 0; /* Add padding inside the container */
+    max-width: 900px; /* Max width for the gallery grid itself */
+    margin: 0 auto; /* Center the gallery container */
+}
+
+.gallery-item {
+    background-color: #f60202; /* White background for each item */
+    border: 8px solid #fc0505; /* Light grey border */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    overflow: hidden; /* Hide anything that overflows, especially rounded corners */
+    text-align: center;
+   
+
+    /* Fixed width for small images, adjust as needed */
+    width: 180px; /* Example fixed width for each gallery item */
+    height: 210px; /* Example fixed height for each gallery item */
+    display: flex; /* Use flex to center image inside item */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item img {
+    width: 100%; /* Make image fill the width of its container */
+    height: 180px; /* Fixed height for image to make them uniform */
+    object-fit: cover; /* Crop image to cover the area without distortion */
+    border-bottom: 8px solid #d11c1c; /* Separator between image and potential caption */
+}
+
+/* Optional: Add styling for quick links if needed */
+.quick-links {
+    text-align: center;
+    padding: 30px 0;
+}
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+
+}
+
+
+}
+
+.quick-links ul li a:hover {
+    background-color: #16a085; /* Darker green on hover */
+    text-decoration: none;
+}/* Contact Page Specific Styling */
+
+/* Form Styling */
+.contact-form {
+    background-color: #f9f9f9; /* Lighter background for the form section */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for the form box */
+    max-width: 600px; /* Limit the width of the form for better readability */
+    margin: 30px auto; /* Center the form horizontally with margin */
+    text-align: left; /* Align form labels/inputs to the left within the centered form box */
+}
+
+.contact-form h2 {
+    text-align: center; /* Ensure the form title is centered */
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+}
+
+.form-group label {
+    display: block; /* Make labels take full width for stacking */
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%; /* Make inputs and textarea take full width of their container */
+    padding: 12px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+.contact-form button[type="submit"] {
+    display: block; /* Make button a block element */
+    width: 100%; /* Make button take full width */
+    padding: 15px;
+    background-color: #1a78bc; /* Greenish-blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #16a085; /* Darker green on hover */
+}
+
+/* General Contact Info Styling */
+.contact-info {
+    text-align: center; /* Center text in the contact info section */
+    padding: 30px 0;
+    margin-bottom: 30px;
+    background-color: #e9f5f5; /* Light background for contact info */
+    border-radius: 8px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info img.page-image { /* Style for the school image you added outside a section */
+    max-width: 80%; /* Adjust size */
+    margin: 30px auto; /* Center with margin */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(27, 2, 138, 0.1);
+}
+
+/* Google Map Styling */
+.google-map {
+    text-align: center; /* Center the map heading and iframe */
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+.google-map iframe {
+    max-width: 100%; /* Ensure map is responsive */
+    height: 400px; /* Fixed height for the map */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+/* Further Enhancements for Academics Page */
+
+/* Departments and Subjects Section - with Borders and enhanced look */
+.departments {
+    background-color: #ffffff; /* White background for the section */
+    padding: 35px 30px; /* Increased padding */
+    border: 1px solid #cceeff; /* Light blue border for the section */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* More pronounced shadow */
+    margin-bottom: 40px; /* More space below the section */
+    text-align: left; /* Align content to the left inside the box */
+}
+
+.departments h2 {
+    text-align: center; /* Keep heading centered */
+    color: #2980b9; /* A professional blue for headings */
+    margin-bottom: 25px;
+}
+
+.departments p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.departments ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin-left: 0;
+}
+
+.departments ul li {
+    background-color: #ecf0f1; /* Light grey background for each list item */
+    margin-bottom: 12px; /* More space between items */
+    padding: 15px 20px; /* Padding inside each item */
+    border-left: 5px solid #1abc9c; /* Green accent border on the left */
+    border-radius: 5px; /* Rounded corners for list items */
+    font-size: 1.15em;
+    color: #34495e;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center content */
+}
+
+.departments ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Academic Images Grid - Ensure consistent padding/spacing */
+.academic-images {
+    padding: 40px 0; /* More padding for this section */
+    margin-bottom: 40px;
+    background-color: #f8fcfd; /* Very light blue background */
+    border-radius: 10px; /* Match section border-radius */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+.academic-images h2 {
+    margin-bottom: 30px;
+    color: #2980b9;
+}
+
+/* Program Structure Table - Enhanced with Borders and styling */
+.program-structure {
+    background-color: #ffffff; /* White background for the section */
+    padding: 35px 30px; /* Increased padding */
+    border: 1px solid #cceeff; /* Light blue border for the section */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* More pronounced shadow */
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.program-structure h2 {
+    text-align: center; /* Keep heading centered */
+    color: #2980b9;
+    margin-bottom: 25px;
+}
+
+.program-structure p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.program-structure table {
+    width: 100%;
+    border-collapse: separate; /* Use separate to allow border-radius on table */
+    border-spacing: 0; /* Remove space between cells */
+    margin-top: 25px;
+    background-color: #2307f8;
+    border: 1px solid #aaddff; /* A slightly darker border for the entire table */
+    border-radius: 8px; /* Rounded corners for the table */
+    overflow: hidden; /* Crucial for rounded corners with borders */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the table */
+}
+
+.program-structure th,
+.program-structure td {
+    border: 1px solid hsl(193, 94%, 49%); /* Very light grey border for cells */
+    padding: 15px 20px; /* Increased padding for cells */
+    text-align: center; /* Center cell content for timetable */
+    font-size: 1em;
+}
+
+.program-structure th {
+    background-color: #3498db; /* Blue background for headers */
+    color: #fff; /* White text for headers */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.program-structure tr:nth-child(even) {
+    background-color: #f5fafd; /* Lighter stripe for zebra effect */
+}
+
+.program-structure tr:hover {
+    background-color: #e0f2f7; /* Soft blue on row hover */
+}
+
+/* Learning Resources Section */
+.learning-resources {
+    background-color: #f0f8ff; /* Very light blue background */
+    padding: 35px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    margin-bottom: 20px; /* Space before footer */
+}
+
+.learning-resources h2 {
+    color: #2980b9;
+}
+
+/* General main styling adjustments for consistent spacing */
+main section {
+    margin-bottom: 40px; /* Ensure good spacing between all sections */
+}
+
+main section:last-of-type {
+    margin-bottom: 0; /* No bottom margin on the last section in main */
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.quick-links {
+    text-align: center;
+    padding: 1rem;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    text-align: left; /* keeps the links stacked properly */
+}
+
+.quick-links li {
+    margin: 0.5rem 0;
+}
+
